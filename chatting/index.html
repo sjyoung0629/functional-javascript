@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Chat</title>
+    <style>
+      .chat_log{ width: 95%; height: 200px; }
+      .name{ width: 10%; }
+      .message{ width: 70%; }
+      .chat{ width: 10%; }
+      .imgUpload label { display: inline-block; padding: .5em .75em; color: #999; font-size: inherit; line-height: normal; vertical-align: middle; background-color: #fdfdfd; cursor: pointer; border: 1px solid #ebebeb; border-bottom-color: #e2e2e2; border-radius: .25em; }
+      .imgUpload input[type="file"] { /* 파일 필드 숨기기 */ position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip:rect(0,0,0,0); border: 0; }
+    </style>
+  </head>
+  <body>
+    <div>
+      <textarea id="chatLog" class="chat_log" readonly></textarea>
+    </div>
+    <form id="chatForm">
+      <input id="name" class="name" type="text">
+      <div class="imgUpload">
+          <label for="ex_file">업로드</label>
+          <input type="file" id="ex_file">
+      </div>
+      <input id="message" class="message" type="text">
+      <input type="submit" class="chat" value="chat"/>
+    </form>
+    <div id="box" class="box">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <!-- <script src="/socket.io/socket.io.js"></script> -->
+    <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+    <script src="client.js"></script>
+    <script>
+    //   var socket = io(); //1
+      
+
+    //   $('#chat').on('submit', function(e){ //2
+    //     socket.emit('send message', $('#name').val(), $('#message').val());
+    //     $('#message').val('');
+    //     $('#message').focus();
+    //     e.preventDefault();
+    //   });
+    //   socket.on('receive message', function(msg){ //3
+    //     $('#chatLog').append(msg+'\n');
+    //     $('#chatLog').scrollTop($('#chatLog')[0].scrollHeight);
+    //   });
+    //   socket.on('change name', function(name){ //4
+    //     $('#name').val(name);
+    //   });
+    </script>
+  </body>
+</html>
